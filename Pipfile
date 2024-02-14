@@ -10,6 +10,7 @@ python-decouple = "*"
 flake8 = "*"
 pyjwt = "*"
 django-cors-headers = "*"
+drf-yasg = "*"
 
 [dev-packages]
 
