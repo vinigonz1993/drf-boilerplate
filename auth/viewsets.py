@@ -2,6 +2,7 @@ import jwt
 from django.contrib.auth import authenticate
 from decouple import config
 from datetime import datetime, timedelta
+from drf_yasg.utils import swagger_auto_schema
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -26,6 +27,7 @@ class TokenHanlder:
 
 class LoginView(APIView):
 
+    @swagger_auto_schema(tags=['Auth'], operation_id='Login')
     def post(self, request):
         username = request.data.get('username')
         password = request.data.get('password')
